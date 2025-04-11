@@ -30,6 +30,224 @@ html { box-sizing: border-box; }
 
 
 body {
-	margin: 0;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: #3d2c2c;
+    background-color: #f8f3f0;
 }
 
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #3e606b;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Hlavička */
+header {
+    background-color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container img {
+    width: 170px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3d2c2c;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f195b2;
+    color: white;
+}
+
+/* Hero sekce */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Vycentrování obsahu */
+    padding: 80px 20px;
+    background: url('images/cupcake.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero .container {
+    width: 1100px; /* Max šířka sekce */
+    margin: 0 auto;
+    align-items: center; /* Zarovnání na střed vertikálně */
+}
+
+.hero .text-content {
+    width: 40%; /* Nastavení šířky textu podle obrázku */
+    padding-left: 80px; /* Posunutí textu podle červené linky */
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero p {
+    font-size: 24px;
+    font-style: italic;
+    margin: 0;
+}
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about img,
+.baking img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.menu .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.menu .grid .item img {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8b5e3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6a4228;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #303339;
+    color: white;
+}
+
+/* Společné styly pro všechny sekce (kromě header a footer) */
+section {
+    padding: 80px 0;
+}
+
+/* ABOUT sekce */
+.about .container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* podle zadání */
+}
+
+.about h2 {
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.about .btn {
+    background-color: #f195b2;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about .btn:hover {
+    background-color: #d2567d;
+}
+
+/* MENU sekce */
+.menu {
+    background-color: #f0f0f0;
+}
+
+.menu h2 {
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.menu .grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menu .item {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden; /* aby zaoblení obrázku fungovalo správně */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu .item:hover {
+    transform: translateY(-5px); /* malý hover efekt */
+  }
+  
+  .menu .item-img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  /* Vnitřní obsah karty */
+  .menu .item h3,
+  .menu .item p {
+    padding: 20px;
+  }
+  
+  .menu .item h3 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    color: #326273;
+    font-size: 18px;
+  }
+  
+  .menu .item p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+  }
